@@ -1,0 +1,371 @@
+@use 'variables';
+@import 'reset';
+@import 'fonts';
+
+.section {
+	margin: (calc(variables.$offsetStep) * 2) 0 0 0;
+}
+
+.sub__title {
+	font-size: 20px;
+	color: variables.$colorText;
+}
+
+.btn {
+	padding: 14px 52px;
+	background: variables.$colorHover;
+	font-size: 18px;
+	color: #fff;
+	letter-spacing: 1.4px;
+	border-radius: 100px;
+	transition: variables.$transition;
+	border: none;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background: variables.$colorSubTitle;
+}
+
+.btn:active {
+	background: variables.$colorHover;
+	transition: 0s;
+}
+
+/********** header **********/
+.header__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.menu__body {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.menu__list {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 0 0 (calc(variables.$offsetStep * 2));
+}
+
+.menu__list:nth-child(1) {
+	margin: 0;
+}
+
+.menu__item {
+	margin: 0 0 0 variables.$offsetStep;
+}
+
+.menu__item:nth-child(1) {
+	margin: 0;
+}
+
+.menu__link {
+	font-size: 25px;
+	color: var(--colorMenu);
+	position: relative;
+	transition: var(--transition);
+}
+
+.menu__link:hover {
+	color: variables.$colorHover;
+}
+
+.menu__link::after {
+	content: '';
+	position: absolute;
+	bottom: -6px;
+	left: 0;
+	width: 0%;
+	height: 5px;
+	background: variables.$colorMenu;
+	border-radius: 2px;
+	transition: variables.$transition;
+}
+
+.menu__link:hover::after {
+	width: 100%;
+	transition: 0s;
+	transition: variables.$transition;
+}
+
+.header__logo>img {
+	width: (calc(variables.$offsetStep) * 2);
+	margin: 0 0 0 variables.$offsetStep;
+}
+
+/********** section offer **********/
+.offer__date {
+	display: block;
+	font-size: 32px;
+	text-align: center;
+	color: variables.$colorHover;
+}
+
+.offer__title {
+	margin: 5px 0;
+	font-size: 70px;
+	text-align: center;
+	color: variables.$colorText;
+	letter-spacing: variables.$letterSpacing;
+}
+
+.offer__sub-title {
+	font-size: 40px;
+	color: variables.$colorSubTitle;
+	text-align: center;
+	letter-spacing: variables.$letterSpacing;
+}
+
+.offer__text {
+	max-width: 450px;
+	margin: 60px auto 0 auto;
+	font-size: 20px;
+	color: variables.$colorText;
+	text-align: center;
+	line-height: 140%;
+	letter-spacing: 0.5px;
+}
+
+.btn__wrap {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.offer__btn {
+	margin: 28px 0 0 0;
+}
+
+/********** footer **********/
+.footer {
+	margin: 100px 0 0 0;
+}
+
+.footer__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	flex-wrap: wrap;
+}
+
+.footer__list {
+	display: flex;
+	align-items: center;
+}
+
+.footer__item {
+	margin: 0 0 0 14px;
+	transition: variables.$transition;
+}
+
+.footer__item:nth-child(1) {
+	margin: 0;
+}
+
+.footer__item:hover .footer__icon {
+	fill: variables.$colorHover;
+}
+
+.footer__item:active .footer__icon {
+	fill: variables.$colorIcon;
+	transition: 0s;
+}
+
+.footer__icon {
+	fill: variables.$colorIcon;
+}
+
+.footer__note {
+	font-size: 17px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.footer__link-site {
+	color: variables.$colorIcon;
+}
+
+.footer__text {
+	max-width: 300px;
+	margin: 20px 0 0 0;
+	text-align: end;
+	color: variables.$colorIcon;
+}
+
+/********** section contacts **********/
+.contacts {
+	margin: 20px 0 0 0;
+}
+
+.contacts__container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.contacts__block {
+	width: 100%;
+}
+
+.contacts__list {
+	margin: 30px 0 0 0;
+	padding: 0 0 0 175px;
+}
+
+.contacts__item {
+	margin: 20px 0 0 0;
+}
+
+.contacts__item:nth-child(1) {
+	margin: 0;
+}
+
+.contacts__name {
+	font-size: 20px;
+	color: #111;
+}
+
+.contacts__result {
+	margin: 10px 0 0 0;
+	font-size: 20px;
+	color: variables.$colorText;
+}
+
+.contacts__form {
+	margin: 20px;
+}
+
+.form__data {
+	margin: 40px 0 0 0;
+}
+
+.form__input {
+	width: 400px;
+	margin: 20px 0 0 0;
+	display: block;
+	border: 1px solid #c0c0c0;
+	padding: 15px 20px;
+	border-radius: 5px;
+	color: #111;
+}
+
+.form__input:nth-child(1) {
+	margin: 0;
+}
+
+.form__input::placeholder {
+	font-size: 16px;
+	color: #c0c0c0;
+}
+
+.title {
+	width: 100%;
+	font-size: 40px;
+	text-align: center;
+	color: variables.$colorText;
+	letter-spacing: variables.$letterSpacing;
+}
+
+.form__agreement {
+	margin: 30px 0 0 0;
+	display: flex;
+	align-items: center;
+}
+
+.agreement__input {
+	width: 20px;
+	height: 20px;
+	border: 1px solid #c0c0c0;
+}
+
+.agreement__text {
+	margin: 0 0 0 10px;
+	color: variables.$colorText;
+}
+
+.agreement__link {
+	color: #000;
+	text-decoration: underline;
+}
+
+.form__btn {
+	display: block;
+	margin: 28px auto 0 auto;
+}
+
+/********** section about **********/
+.about__title {
+	margin: 0 0 20px 0;
+}
+
+.about__sub-title {
+	margin: 10px 0 0 0;
+	text-align: center;
+}
+
+.about__btn {
+	display: block;
+	margin: 28px auto 0 auto;
+}
+
+.about__map {
+	display: block;
+	margin: 25px auto 0 auto;
+	border: none;
+	border-radius: 5px;
+}
+
+/********** section help **********/
+.help {
+	padding: 0 0 0 120px;
+}
+
+.help__list {
+	margin: 30px 0 0 0;
+}
+
+.help__item {
+	margin: 30px 0 0 0;
+}
+
+.help__item:nth-child(1) {
+	margin: 0;
+}
+
+.help__question {
+	text-decoration: underline;
+	font-size: 24px;
+	color: variables.$colorText;
+}
+
+.help__answer {
+	margin: 10px 0 0 0;
+	font-size: 18px;
+	color: variables.$colorText;
+}
+
+.popup {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 600px;
+	height: 600px;
+	position: fixed;
+	z-index: 15;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: variables.$colorText;
+	border-radius: 5px;
+}
+
+.popup>span {
+	color: #fff;
+	font-size: 30px;
+	text-align: center;
+}
